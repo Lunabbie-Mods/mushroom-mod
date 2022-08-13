@@ -17,5 +17,5 @@ tasks.processResources {
 }
 
 tasks.remapJar {
-    archiveBaseName.set("${properties["mod_name"]}")
+    archiveBaseName.set("${properties["mod_id"]}")
 }
