@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "mushroom-mod",
+  "version": "${mod_version}",
+  "name": "Mushroom Mod",
+  "authors": ["Luna", "Abbie"],
+  "contact": {
+    "repo": "https://github.com/Lunabbie-Mods/mushroom-mod/"
+  },
+  "LICENSE": "MIT",
+  "environment": "*",
+  "mixins": [ ],
+  "entrypoints": { },
+  "depends": {
+    "minecraft": "~${minecraft_version}",
+    "fabricloader": ">=${loader_version}"
+  }
+}
