@@ -9,7 +9,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModItems {
-    private static final FoodComponent PAINSHROOM_FOODCOMPONENT = new FoodComponent.Builder().hunger(0).saturationModifier(0.0f).statusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 1, 0), 1.0f).build();
+    private static final FoodComponent PAINSHROOM_FOODCOMPONENT = new FoodComponent.Builder().hunger(0).saturationModifier(0.0f).alwaysEdible().statusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 1, 0), 1.0f).build();
     public static final Item PAINSHROOM = new Item(new FabricItemSettings().group(MushroomMod.ITEM_GROUP).food(PAINSHROOM_FOODCOMPONENT));
 
     public static void register() {
