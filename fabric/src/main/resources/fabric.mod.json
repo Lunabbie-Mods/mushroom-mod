@@ -9,7 +9,7 @@
   },
   "liense": "MIT",
   "environment": "*",
-  "mixins": [ ],
+  "mixins": [ "mushroommod.mixins.json" ],
   "entrypoints": {
     "main": [ "com.lunabbie.mushroommod.MushroomMod" ]
   },
