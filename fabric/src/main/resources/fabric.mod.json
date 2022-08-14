@@ -7,7 +7,7 @@
   "contact": {
     "repo": "https://github.com/Lunabbie-Mods/mushroom-mod/"
   },
-  "LICENSE": "MIT",
+  "liense": "MIT",
   "environment": "*",
   "mixins": [ ],
   "entrypoints": {
