@@ -19,3 +19,7 @@ tasks.processResources {
 tasks.remapJar {
     archiveBaseName.set("${properties["mod_id"]}")
 }
+
+loom {
+    accessWidenerPath.set(File("src/main/resources/mushroommod.accesswidener"))
+}
