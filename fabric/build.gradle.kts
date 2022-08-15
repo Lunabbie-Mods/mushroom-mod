@@ -1,5 +1,6 @@
 plugins {
     id("fabric-loom") version "0.12-SNAPSHOT"
+    kotlin("jvm") version "1.7.0"
 }
 
 dependencies {
@@ -8,6 +9,9 @@ dependencies {
     mappings(group = "net.fabricmc", name = "yarn", version = "${properties["yarn_mappings"]}", classifier = "v2")
     modImplementation(group = "net.fabricmc", name = "fabric-loader", version = "${properties["loader_version"]}")
     modImplementation(group = "net.fabricmc.fabric-api", name = "fabric-api", version = "${properties["fabric_api"]}")
+
+    // Kotlin
+    modImplementation(group = "net.fabricmc",name ="fabric-language-kotlin", version = "${properties["kotlin_mod_version"]}+kotlin.${properties["kotlin_version"]}")
 }
 
 tasks.processResources {
