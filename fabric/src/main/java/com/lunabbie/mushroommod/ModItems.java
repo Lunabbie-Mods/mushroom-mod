@@ -3,6 +3,7 @@ package com.lunabbie.mushroommod;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -10,7 +11,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModItems {
-    public static final Item PAINSHROOM = new Item(
+    public static final Item PAINSHROOM = new BlockItem(
+            ModBlocks.PAINSHROOM,
             new FabricItemSettings()
                     .group(MushroomMod.ITEM_GROUP)
                     .food(
