@@ -4,7 +4,8 @@
   "package": "com.lunabbie.mushroommod.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "AbstractFurnaceBlockEntityMixin"
+    "AbstractFurnaceBlockEntityMixin",
+    "BrewingRecipeRegistryMixin"
   ],
   "client": [
   ],
