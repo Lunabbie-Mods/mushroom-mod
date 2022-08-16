@@ -11,8 +11,14 @@
   "environment": "*",
   "mixins": [ "mushroommod.mixins.json" ],
   "entrypoints": {
-    "main": [ "com.lunabbie.mushroommod.MushroomMod" ],
-    "client": [ "com.lunabbie.mushroommod.MushroomModClient" ]
+    "main": [ {
+      "adapter": "kotlin",
+      "value": "com.lunabbie.mushroommod.MushroomModKt::init"
+    } ],
+    "client": [ {
+      "adapter": "kotlin",
+      "value": "com.lunabbie.mushroommod.MushroomModKt::initClient"
+    } ]
   },
   "depends": {
     "minecraft": "~${minecraft_version}",

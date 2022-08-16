@@ -10,11 +10,14 @@ import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+import static com.lunabbie.mushroommod.MushroomModKt.MODID;
+
+
 public class ModItems {
     public static final Item PAINSHROOM = new BlockItem(
             ModBlocks.PAINSHROOM,
             new FabricItemSettings()
-                    .group(MushroomMod.ITEM_GROUP)
+                    .group(MushroomModKt.getITEM_GROUP())
                     .food(
                             new FoodComponent.Builder()
                                     .hunger(0)
@@ -35,7 +38,7 @@ public class ModItems {
     );
     public static final Item MUSHROOM_BREW = new LeftoverFoodItem(
             new FabricItemSettings()
-                    .group(MushroomMod.ITEM_GROUP)
+                    .group(MushroomModKt.getITEM_GROUP())
                     .maxCount(1)
                     .food(
                             new FoodComponent.Builder()
@@ -58,7 +61,7 @@ public class ModItems {
     );
 
     public static void register() {
-        Registry.register(Registry.ITEM, new Identifier(MushroomMod.MODID, "painshroom"), PAINSHROOM);
-        Registry.register(Registry.ITEM, new Identifier(MushroomMod.MODID, "mushroom_brew"), MUSHROOM_BREW);
+        Registry.register(Registry.ITEM, new Identifier(MODID, "painshroom"), PAINSHROOM);
+        Registry.register(Registry.ITEM, new Identifier(MODID, "mushroom_brew"), MUSHROOM_BREW);
     }
 }
