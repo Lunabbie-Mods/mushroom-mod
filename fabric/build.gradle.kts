@@ -1,6 +1,7 @@
 plugins {
     id("fabric-loom") version "0.12-SNAPSHOT"
     kotlin("jvm") version "1.7.0"
+    id("com.diffplug.spotless") version "6.9.1"
 }
 
 dependencies {
@@ -26,4 +27,14 @@ tasks.remapJar {
 
 loom {
     accessWidenerPath.set(File("src/main/resources/mushroommod.accesswidener"))
+}
+
+repositories {
+    mavenCentral()
+}
+
+spotless {
+    java {
+        eclipse()
+    }
 }
