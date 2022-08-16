@@ -18,23 +18,23 @@ tasks.processResources {
     filesMatching("fabric.mod.json") {
         expand(properties)
     }
+    dependsOn("runDatagenClient")
 }
 
 tasks.remapJar {
-    dependsOn("runDatagenClient")
     archiveBaseName.set("${properties["mod_id"]}")
 }
 
 sourceSets {
     main {
         resources {
-            srcDirs.add(File("src/main/generated"))
+            srcDirs.add(file("src/main/generated"))
         }
     }
 }
 
 loom {
-    accessWidenerPath.set(File("src/main/resources/mushroommod.accesswidener"))
+    accessWidenerPath.set(file("src/main/resources/mushroommod.accesswidener"))
 
     runs {
         create("datagenClient") {
@@ -44,7 +44,7 @@ loom {
             name("dataGeneration")
             vmArgs(
                 "-Dfabric-api.datagen",
-                "-Dfabric-api.datagen.output-dir=${File("src/main/generated")}",
+                "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}",
                 "-Dfabric-api.datagen.strict-validation"
             )
 
