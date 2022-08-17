@@ -34,21 +34,4 @@ sourceSets {
 
 loom {
     accessWidenerPath.set(File("src/main/resources/mushroommod.accesswidener"))
-
-    runs {
-        create("datagenClient") {
-
-            inherit(runConfigs.getByName("client"))
-
-            name("dataGeneration")
-            vmArgs(
-                "-Dfabric-api.datagen",
-                "-Dfabric-api.datagen.output-dir=${File("src/main/generated")}",
-                "-Dfabric-api.datagen.strict-validation"
-            )
-
-            ideConfigGenerated(true)
-            runDir("build/datagen")
-        }
-    }
 }
