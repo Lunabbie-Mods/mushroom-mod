@@ -1,6 +1,5 @@
 package com.lunabbie.mushroommod.items
 
-import com.lunabbie.mushroommod.ITEM_GROUP
 import com.lunabbie.mushroommod.blocks.PainshroomBlock
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.entity.effect.StatusEffectInstance
@@ -11,7 +10,6 @@ import net.minecraft.item.FoodComponent
 object Painshroom : BlockItem(
     PainshroomBlock,
     FabricItemSettings()
-        .group(ITEM_GROUP)
         .food(
             FoodComponent.Builder()
                 .hunger(0)

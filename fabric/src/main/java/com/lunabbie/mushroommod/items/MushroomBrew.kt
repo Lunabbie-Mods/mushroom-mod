@@ -1,7 +1,6 @@
 package com.lunabbie.mushroommod.items
 
-import com.lunabbie.mushroommod.ITEM_GROUP
-import com.lunabbie.mushroommod.LeftoverFoodItem
+import com.lunabbie.mushroommod.items.util.LeftoverFoodItem
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.entity.effect.StatusEffectInstance
 import net.minecraft.entity.effect.StatusEffects
@@ -10,7 +9,6 @@ import net.minecraft.item.Items
 
 object MushroomBrew : LeftoverFoodItem(
     FabricItemSettings()
-        .group(ITEM_GROUP)
         .maxCount(1)
         .food(
             FoodComponent.Builder()
