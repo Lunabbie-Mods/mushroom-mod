@@ -10,7 +10,9 @@ import static com.lunabbie.mushroommod.MushroomModKt.identifier;
 public class ModBlocks {
     public static void register() {
         Registry.register(Registry.BLOCK, identifier("painshroom"), PainshroomBlock.INSTANCE);
+        Registry.register(Registry.BLOCK, identifier("potted_painshroom"), PottedPainshroomBlock.INSTANCE);
     }
+
     public static void registerRendering() {
         BlockRenderLayerMap.INSTANCE.putBlock(PainshroomBlock.INSTANCE, RenderLayer.getCutout());
     }
