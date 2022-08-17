@@ -3,8 +3,8 @@ package com.lunabbie.mushroommod
 import com.lunabbie.mushroommod.items.groups.ModItemGroup
 import net.minecraft.util.Identifier
 
-const val MODID = "mushroommod"
-fun identifier(id: String) = Identifier.of(MODID, id)
+const val MOD_ID = "mushroommod"
+fun identifier(id: String) = Identifier.of(MOD_ID, id)
 
 fun init() {
     ModItemGroup.registerAll()
