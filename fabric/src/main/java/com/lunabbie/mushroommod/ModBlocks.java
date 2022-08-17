@@ -1,6 +1,7 @@
 package com.lunabbie.mushroommod;
 
 import com.lunabbie.mushroommod.blocks.PainshroomBlock;
+import com.lunabbie.mushroommod.blocks.PottedPainshroomBlock;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.registry.Registry;
