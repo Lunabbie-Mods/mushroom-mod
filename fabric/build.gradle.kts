@@ -21,7 +21,6 @@ tasks.processResources {
 }
 
 tasks.remapJar {
-    dependsOn("runDatagenClient")
     archiveBaseName.set("${properties["mod_id"]}")
 }
 
