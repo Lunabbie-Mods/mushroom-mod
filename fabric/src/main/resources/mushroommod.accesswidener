@@ -1,2 +1,4 @@
 accessWidener	v1	named
 accessible method net/minecraft/recipe/BrewingRecipeRegistry registerItemRecipe (Lnet/minecraft/item/Item;Lnet/minecraft/item/Item;Lnet/minecraft/item/Item;)V
+accessible field net/minecraft/item/Item group Lnet/minecraft/item/ItemGroup;
+mutable field net/minecraft/item/Item group Lnet/minecraft/item/ItemGroup;

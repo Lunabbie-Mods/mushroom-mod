@@ -14,6 +14,12 @@ dependencies {
     modImplementation(group = "net.fabricmc",name ="fabric-language-kotlin", version = "${properties["kotlin_mod_version"]}+kotlin.${properties["kotlin_version"]}")
 }
 
+tasks.compileKotlin {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
 tasks.processResources {
     filesMatching("fabric.mod.json") {
         expand(properties)

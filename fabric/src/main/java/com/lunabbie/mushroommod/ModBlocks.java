@@ -1,25 +1,20 @@
 package com.lunabbie.mushroommod;
 
+import com.lunabbie.mushroommod.blocks.PainshroomBlock;
+import com.lunabbie.mushroommod.blocks.PottedPainshroomBlock;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.minecraft.block.*;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.world.BlockView;
+
+import static com.lunabbie.mushroommod.MushroomModKt.identifier;
 
 public class ModBlocks {
-    public static Block PAINSHROOM = new MushroomPlantBlock(AbstractBlock.Settings.of(Material.PLANT, MapColor.PINK).nonOpaque().noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).postProcess((BlockState state, BlockView world, BlockPos pos) -> true), null);
-
-	public static Block POTTED_PAINSHROOM = new FlowerPotBlock(PAINSHROOM, AbstractBlock.Settings.of(Material.DECORATION).breakInstantly().nonOpaque());
-
     public static void register() {
-        Registry.register(Registry.BLOCK, new Identifier(MushroomMod.MODID, "painshroom"), PAINSHROOM);
-		Registry.register(Registry.BLOCK, new Identifier(MushroomMod.MODID, "potted_painmushroom"), POTTED_PAINSHROOM);
-	}
+        Registry.register(Registry.BLOCK, identifier("painshroom"), PainshroomBlock.INSTANCE);
+        Registry.register(Registry.BLOCK, identifier("potted_painshroom"), PottedPainshroomBlock.INSTANCE);
+    }
 
     public static void registerRendering() {
-        BlockRenderLayerMap.INSTANCE.putBlock(PAINSHROOM, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(PainshroomBlock.INSTANCE, RenderLayer.getCutout());
     }
 }
