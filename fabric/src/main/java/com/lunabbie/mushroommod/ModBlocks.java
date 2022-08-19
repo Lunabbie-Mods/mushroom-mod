@@ -16,5 +16,6 @@ public class ModBlocks {
 
     public static void registerRendering() {
         BlockRenderLayerMap.INSTANCE.putBlock(PainshroomBlock.INSTANCE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(PottedPainshroomBlock.INSTANCE, RenderLayer.getCutout());
     }
 }
