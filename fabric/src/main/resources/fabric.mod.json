@@ -23,7 +23,8 @@
   "depends": {
     "minecraft": "~${minecraft_version}",
     "fabricloader": ">=${loader_version}",
-    "fabric-language-kotlin": ">=${kotlin_mod_version}+kotlin.${kotlin_version}"
+    "fabric-language-kotlin": ">=${kotlin_mod_version}+kotlin.${kotlin_version}",
+    "fabric-api": "*"
   },
   "accessWidener" : "mushroommod.accesswidener"
 }
