@@ -14,6 +14,7 @@ object MushroomBrew : LeftoverFoodItem(
             FoodComponent.Builder()
                 .hunger(0)
                 .saturationModifier(0.0f)
+                .alwaysEdible()
                 .statusEffect(
                     StatusEffectInstance(
                         StatusEffects.INSTANT_HEALTH,
