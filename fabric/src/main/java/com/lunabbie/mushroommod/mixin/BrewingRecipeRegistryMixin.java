@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(BrewingRecipeRegistry.class)
 public abstract class BrewingRecipeRegistryMixin {
     @Inject(method = "registerDefaults", at = @At("TAIL"))
-    private static void addDragonBreathRecipe(CallbackInfo ci) {
+    private static void mushroommod$addDragonBreathRecipe(CallbackInfo ci) {
         BrewingRecipeRegistry.registerItemRecipe(Items.SPLASH_POTION, Painshroom.INSTANCE, Items.LINGERING_POTION);
     }
 }
